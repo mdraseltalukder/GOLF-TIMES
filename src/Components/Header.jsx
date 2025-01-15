@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [isToggleOpen, setIsToggleOpen] = useState(false)
@@ -64,45 +65,45 @@ export default function Header() {
               }`}
             >
               <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>Home</span>
-                </a>
+                <NavLink to={"/"}
+                
+                  
+                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8">
+                Home
+                </NavLink>
               </li>
               <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-current="page"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 text-purple-500 transition-colors duration-300 hover:text-purple-600 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>Features</span>
-                </a>
+              <NavLink to={"/about"}
+                
+                  
+                className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8">
+              About
+              </NavLink>
+              </li>
+              
+              <li role="none" className="flex items-stretch">
+              <NavLink to={"/service"}
+                
+                  
+                className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8">
+              Service
+              </NavLink>
               </li>
               <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>Pricing</span>
-                </a>
+              <NavLink to={"/blog"}
+                
+                  
+                className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8">
+              Blog
+              </NavLink>
               </li>
               <li role="none" className="flex items-stretch">
-                <a
-                  role="menuitem"
-                  aria-haspopup="false"
-                  className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8"
-                  href="javascript:void(0)"
-                >
-                  <span>About</span>
-                </a>
+              <NavLink to={"/contact"}
+                
+                  
+                className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-purple-500 focus:text-purple-600 focus:outline-none focus-visible:outline-none lg:px-8">
+              Contact
+              </NavLink>
               </li>
             </ul>
           </nav>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 // import { Axios } from 'axios';
 import axios from 'axios';
 
-export default function useFecth(url) {
+export default function useFetch(url) {
 
     const [data, setData]=useState([]);
     const [loading,setLoading]=useState(true);
@@ -13,10 +13,16 @@ export default function useFecth(url) {
       const fetchData = async () => {
         try{
          
-          const response = await axios.get(url);
+          const response = await axios.get(url
+            , {
+            headers:{
+              Authorization: "bearer" + import.meta.env.VITE_API_TOKEN
+            }
+          }
+        );
           // const responseData=  response.json();
-         console.log(response.data);
-          setData(response.data);
+         console.log(response.data.data);
+          setData(response.data.data);
       
          
         }catch(err){
